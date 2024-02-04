@@ -1,15 +1,15 @@
-# Identify
+# StrongIDs
 
-Identify is a NuGet package designed to simplify strongly typed IDs in C# projects by reducing boilerplate code and enhancing codebase clarity. 
+*StrongIDs* is a NuGet package designed to simplify strongly typed IDs in C# projects by reducing boilerplate code and enhancing codebase clarity. 
 
-Strongly typed IDs provided by *Identify* wrap Guids, offering a clean and efficient way to handle unique identifiers.
+Strongly typed IDs provided by *StrongIDs* wrap Guids, offering a clean and efficient way to handle unique identifiers.
 
 ## Installation
 
 Install package via [NuGet](https://www.nuget.org/):
 
 ```bash
-dotnet add package Identify
+dotnet add package StrongIDs
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ Strongly typed IDs can have the following access modifiers:
 *    internal
 *    public
 
-Define a strongly typed ID using *Identify*. Ensure it is a public, readonly, partial, and a record struct. For example:
+Define a strongly typed ID using *StrongIDs*. Ensure it is readonly, partial, and a record struct. For example:
 
 ```csharp
 public readonly partial record struct UserId : IEntityId<UserId>;
