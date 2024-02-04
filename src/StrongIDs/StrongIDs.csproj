@@ -11,15 +11,21 @@
         <PackageId>StrongIDs</PackageId>
         <Title>StrongIDs</Title>
         <Authors>Maximilian Hollnbuchner</Authors>
-        <Description>The StrongIDs package reduces boilerplate for strongly typed IDs, enhancing code clarity and saving development time</Description>
+        <Description>*StrongIDs* is a NuGet package designed to simplify strongly typed IDs in C# projects by reducing boilerplate code and enhancing codebase clarity. 
+
+Strongly typed IDs provided by *StrongIDs* wrap Guids, offering a clean and efficient way to handle unique identifiers.</Description>
         <Version>0.1.0</Version>
-        <PackageIcon>StrongIDs.gif</PackageIcon>
+        <PackageIcon>favicon-min.png</PackageIcon>
         <RepositoryUrl>https://github.com/Maxi10022/StrongIDs</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <Copyright>Maximilian Hollnbuchner</Copyright>
         <PackageProjectUrl>https://github.com/Maxi10022/StrongIDs</PackageProjectUrl>
-        <PackageLicenseUrl>https://raw.githubusercontent.com/Maxi10022/StrongIDs/master/LICENSE</PackageLicenseUrl>
         <PackageReleaseNotes>Release of StrongIDs</PackageReleaseNotes>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
@@ -28,5 +34,14 @@
         </PackageReference>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.3.0"/>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.3.0"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include=".assets\favicon-min.png" Pack="true" PackagePath=""/>
+        <None Include=".assets\LICENSE" Pack="true" PackagePath=""/>
+        <None Include=".assets\README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="tools" />
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
 </Project>

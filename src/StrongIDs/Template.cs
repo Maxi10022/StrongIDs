@@ -28,7 +28,7 @@ internal static class Template
                      
                      public static {{name}} New() => new {{name}}(Guid.NewGuid());
                  
-                     public static {{name}} Parse(string? value) =>
+                     public static {{name}} Parse(string value) =>
                          Guid.TryParse(value, out Guid id) ? new {{name}}(id) : Empty;
                  }
                  """;
