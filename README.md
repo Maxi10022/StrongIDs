@@ -6,7 +6,7 @@ Strongly typed IDs provided by *StrongIDs* wrap Guids, offering a clean and effi
 
 ## Installation
 
-Install package via [NuGet](https://www.nuget.org/):
+Install package via [NuGet](https://www.nuget.org/packages/StrongIDs/):
 
 ```bash
 dotnet add package StrongIDs
