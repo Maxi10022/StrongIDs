@@ -68,6 +68,7 @@ public class StrongIDsSourceGenerator : IIncrementalGenerator
         if (symbol is null || symbol.IsAbstract)
             return notFound;
         
+        // TODO raise DiagnosticDescriptor error
         if (!symbol.IsReadOnly)
             return notFound;
         

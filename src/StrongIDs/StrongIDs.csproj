@@ -9,9 +9,17 @@
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <IsRoslynComponent>true</IsRoslynComponent>
         <PackageId>StrongIDs</PackageId>
-        <Title>Identify</Title>
+        <Title>StrongIDs</Title>
         <Authors>Maximilian Hollnbuchner</Authors>
-        <Description>The Identify package reduces boilerplate for strongly typed IDs, enhancing code clarity and saving development time</Description>
+        <Description>The StrongIDs package reduces boilerplate for strongly typed IDs, enhancing code clarity and saving development time</Description>
+        <Version>0.1.0</Version>
+        <PackageIcon>StrongIDs.gif</PackageIcon>
+        <RepositoryUrl>https://github.com/Maxi10022/StrongIDs</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <Copyright>Maximilian Hollnbuchner</Copyright>
+        <PackageProjectUrl>https://github.com/Maxi10022/StrongIDs</PackageProjectUrl>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/Maxi10022/StrongIDs/master/LICENSE</PackageLicenseUrl>
+        <PackageReleaseNotes>Release of StrongIDs</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
