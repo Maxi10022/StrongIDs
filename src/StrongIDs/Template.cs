@@ -31,7 +31,7 @@ internal static class Template
                  using StrongIDs;
                  {{(!string.IsNullOrEmpty(identifierNamespace)
                      ? $"namespace {identifierNamespace};" : string.Empty)}}
-                 {{accessibility.ToDisplayString()}} partial record struct {{name}} : IEntityId<{{name}}>
+                 {{accessibility.ToDisplayString()}} readonly partial record struct {{name}} : IEntityId<{{name}}>
                  {
                      public Guid Value { get; }
                  
