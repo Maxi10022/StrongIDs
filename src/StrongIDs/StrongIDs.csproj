@@ -14,13 +14,13 @@
         <Description>*StrongIDs* is a NuGet package designed to simplify strongly typed IDs in C# projects by reducing boilerplate code and enhancing codebase clarity. 
 
 Strongly typed IDs provided by *StrongIDs* wrap Guids, offering a clean and efficient way to handle unique identifiers.</Description>
-        <Version>0.1.0</Version>
+        <Version>0.2.0</Version>
         <PackageIcon>favicon-min.png</PackageIcon>
         <RepositoryUrl>https://github.com/Maxi10022/StrongIDs</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <Copyright>Maximilian Hollnbuchner</Copyright>
         <PackageProjectUrl>https://github.com/Maxi10022/StrongIDs</PackageProjectUrl>
-        <PackageReleaseNotes>Release of StrongIDs</PackageReleaseNotes>
+        <PackageReleaseNotes>Udated user consumption interface</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
