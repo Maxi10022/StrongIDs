@@ -13,8 +13,11 @@ public class StrongIDsSourceGenerator : IIncrementalGenerator
     {
         context.RegisterPostInitializationOutput(ctx =>
         {
-            var tuple = Template.EntityIdInterface;
-            ctx.AddSource(tuple.Name, tuple.Code);
+            var entityId = Template.EntityIdInterface;
+            ctx.AddSource($"{entityId.Name}.g.cs", entityId.Code);
+
+            var strongId = Template.StrongIdInterface;
+            ctx.AddSource($"{strongId.Name}.g.cs", strongId.Code);
         });
 
         var provider = context.SyntaxProvider
@@ -73,7 +76,7 @@ public class StrongIDsSourceGenerator : IIncrementalGenerator
             return notFound;
         
         var implementsEntityIdInterface = symbol.Interfaces
-            .Any(x => x.IsAbstract && x.Name.Contains(StrongIDs.MarkerName));
+            .Any(x => x.IsAbstract && x.Name.Contains(StrongIDs.StrongIdInterfaceName));
         
         return implementsEntityIdInterface ? 
             (structDeclarationSyntax: recordDeclarationSyntax, true) : 

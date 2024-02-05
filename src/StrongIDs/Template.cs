@@ -4,12 +4,27 @@ namespace StrongIDs;
 
 internal static class Template
 {
-    public static (string Name, string Code) EntityIdInterface =>(
-        StrongIDs.MarkerName, 
+    public static (string Name, string Code) StrongIdInterface =>(
+        StrongIDs.StrongIdInterfaceName, 
         $$"""
           namespace {{StrongIDs.Namespace}};
-          public interface {{StrongIDs.MarkerName}}<out T> where T : struct;
+          public interface {{StrongIDs.StrongIdInterfaceName}}<out T> where T : struct;
           """);
+    
+    public static (string Name, string Code) EntityIdInterface =>(
+        StrongIDs.EntityIdInterfaceName, 
+        $$"""
+          namespace {{StrongIDs.Namespace}};
+          public interface {{StrongIDs.EntityIdInterfaceName}}<out T> : {{StrongIDs.StrongIdInterfaceName}}<T> where T : struct
+          {
+              public Guid Value { get; }
+              public bool HasValue { get; }
+              public static abstract T Empty { get; }
+              public static abstract T Parse(string value);
+              public static abstract T New();
+          }
+          """);
+    
     public static string Identifier(string identifierNamespace, string name, Accessibility accessibility)
     {
         return $$"""
