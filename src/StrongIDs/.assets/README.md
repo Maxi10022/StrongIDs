@@ -15,7 +15,7 @@ public readonly partial record struct UserId : IStrongId<UserId>;
 
 This generates the following code, using the IEntityId<T> interface.
 
-**```csharp**
+```csharp
 public partial record struct UserId : IEntityId<UserId>
 {
     public Guid Value { get; }
